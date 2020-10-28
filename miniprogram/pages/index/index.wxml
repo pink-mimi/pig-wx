@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
    <view class="index_swiper">
-      <swiper style="height: 480rpx ;width:100%" indicator-dots="true" circular="true">
+      <swiper style="height: 480rpx ;width:100%" indicator-dots="true" indicator-active-color="#ffffff" circular="true">
           <swiper-item wx:for="{{swiper}}" wx:key="index">
             <view class="swiper-item">
-               <image class="swiper_img" src="{{item}}"></image>
+               <image class="swiper_img" src="{{item.imgURL}}"></image>
             </view>
           </swiper-item>
       </swiper>
@@ -12,9 +12,187 @@
    </view>
 
    <view class="index_content">
+      
+      <!-- search搜索框 -->
       <view class="index_search">
-         <input type="text" class="search" name="" id="" />
+         <view class="index_search_p1">
+            <van-icon class="icon_seach1" name="search" color="black" />
+            <text class="index_search_text1">搜索</text>
+         </view>
+     
+         <input type="text" class="search" name="" id="" placeholder="城市/景点/地标" placeholder-style='font-size: 14px;color:#bdbdbd'disabled="true" />
+
+         <view class="index_search_p2">
+            <van-icon class="icon_seach2" name="location" color="black" />
+            <text class="index_search_text2">搜附近</text>
+         </view>
       </view>
+
+      <!-- 宫格 -->
+      <view class="index_gongge">
+         <view class="index_gongge_item b">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,EDUp,120,120,1,5f9ccbfe.png"></image>
+            <view>聚会轰趴</view>
+         </view>
+         <view class="index_gongge_item b">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,EDUD,120,120,1,5be9cad6.png"></image>
+            <view>能做饭</view>
+         </view>
+         <view class="index_gongge_item b">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,KOyD,120,120,1,6090bb99.png"></image>
+            <view>周租月租</view>
+         </view>
+         <view class="index_gongge_item b">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,EDV8,120,120,1,e190893b.png"></image>
+            <view>快速预定</view>
+         </view>
+         <view class="index_gongge_item b">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,EDVD,120,120,1,ab5e1683.png"></image>
+            <view>浪漫约会</view>
+         </view>
+         <view class="index_gongge_item">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,HpCy,120,120,1,be3d6511.png"></image>
+            <view>首单立减</view>
+         </view>
+         <view class="index_gongge_item">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,K1S5,120,120,1,a0a9f47e.png"></image>
+            <view>新房8折</view>
+         </view>
+         <view class="index_gongge_item">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,KlJ2,120,120,1,22250118.png"></image>
+            <view>11.11狂欢</view>
+         </view>
+         <view class="index_gongge_item">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,HpCD,120,120,1,71eea674.png"></image>
+            <view>学生7折</view>
+         </view>
+         <view class="index_gongge_item">
+            <image class="gongge_item_img" src="http://image.xiaozhustatic2.com/00,120,120/s,3,HdeZ,120,120,1,d6879e86.png"></image>
+            <view>今晚特价</view>
+         </view>
+      </view>
+
+      <!-- 城市滑块 -->
+      <view class="index_city">
+         <view class="city city_active">郑州</view>
+         <view class="city">洛阳</view>
+         <view class="city">开封</view>
+         <view class="city">邯郸</view>
+         <view class="city">成都</view>
+         <view class="city">上海</view>
+         <view class="city">东京</view>
+         <view class="city">重庆</view>
+         <view class="city">更多</view>
+      </view>
+
+      <!-- goods房型 -->
+      <view class="index_house">
+         <view class="house_list">
+            <view class="house_item">
+               <view >
+                  <image class="house_item_img" src="https://image.xiaozhustatic3.com/11/s,1,HqQt,1126,750,2,dfb3e444.webp"></image>
+               </view>
+               <view class="house_item_content">
+                   <view class="house_item_content1">
+                      <view>
+                        <text class="house_price">￥358</text>
+                        <text class="dian">·</text>
+                        <text class="house_dwell">宜住4人</text>
+                      </view>
+                      <view>
+                        <van-icon class="star" name="star" />
+                        <text class="house_grade">4.9</text>
+                      </view>
+                   </view>
+                   <view class="house_item_content2">
+                      郑大旁/地铁口/loft/设计师民宿
+                   </view>
+               </view>
+            </view>
+         </view>
+
+         <view class="house_more">
+            查看更多房源
+         </view>
+      </view>
+
+      <!-- swiper轮播 -->
+      <view class="index_content_swiper">
+         <swiper style="height: 350rpx ;width:100%" indicator-dots="true" indicator-active-color="#ffffff" circular="true">
+            <swiper-item class="swiper_item" wx:for="{{content_swiper}}" wx:key="index">
+               <view class="swiper-item">
+                  <image class="index_content_swiper_img" src="{{item.imgURL}}"></image>
+               </view>
+            </swiper-item>
+         </swiper>
+      </view>
+
+      <!-- 超值特惠 -->
+      <view class="index_discounts">
+         <view class="discounts_title">
+            超值特惠
+         </view>
+         <view class="discounts_img">
+            <view class="img_left">
+               <image class="img_left1" src="http://image.xiaozhustatic2.com/00,504,510/s,3,CGKI,504,510,1,e9538035.png"></image>
+               <view class="img_left_p">
+                  <view class="img_left_p1">周租月租优惠</view>
+                  <text class="img_left_p2">最低1折起</text>
+               </view>
+            </view>
+            <view class="img_right">
+               <image class="img_right1" src="http://image.xiaozhustatic2.com/00,513,249/s,3,r9cF,513,249,1,f8e1b714.png">
+                  <view class="img_right1_p">
+                     <view class="img_right1_p1">今晚特价</view>
+                     <view class="img_right1_p2">尾房秒杀</view>
+                  </view>
+               </image>
+               <image class="img_right2" src="http://image.xiaozhustatic2.com/00,513,243/s,3,r9cE,513,243,1,03d448bf.png">
+                  <view class="img_right1_p">
+                     <view class="img_right1_p1">新房8折</view>
+                     <view class="img_right1_p2">仅限3位名额</view>
+                  </view>
+               </image>
+            </view>
+         </view>
+      </view>
+
+      <!-- 小猪保障 -->
+      <view class="index_safeguard">
+         <view class="safeguard_text">
+            <view class="text1">小 猪 保 障</view>
+            <view class="text2">蚂蚁花呗 · 小猪商旅 · 小猪免押 · 小猪保险</view>
+         </view>
+         <view class="safeguard_logo">
+            <view class="safeguard_logo_item">
+               <view class="logo_item">
+                  <image class="logo_img" src="http://image.xiaozhustatic2.com/00,100,100/s,3,qLa3,100,100,1,a7a65d2b.png"></image>
+               </view>
+               <view class="logo_text">蚂蚁花呗</view>
+            </view>
+            <view class="safeguard_logo_item">
+               <view class="logo_item">
+                  <image class="logo_img" src="http://image.xiaozhustatic2.com/00,100,100/s,3,qL9Z,100,100,1,08e502ff.png"></image>
+               </view>
+               <view class="logo_text">小猪商旅</view>
+            </view>
+            <view class="safeguard_logo_item">
+               <view class="logo_item">
+                  <image class="logo_img" src="http://image.xiaozhustatic2.com/00,100,100/s,3,qL9X,100,100,1,69a7a51c.png"></image>
+               </view>
+               <view class="logo_text">小猪免押</view>
+            </view>
+            <view class="safeguard_logo_item">
+               <view class="logo_item">
+                  <image class="logo_img" src="http://image.xiaozhustatic2.com/00,100,100/s,3,qL9I,100,100,1,05e6af7e.png"></image>
+               </view>
+               <view class="logo_text">小猪保险</view>
+            </view>
+         </view>
+      </view>
+
    </view>
+
+
  
 </view>
