@@ -1,2 +1,78 @@
 <!--pages/more/more.wxml-->
-<text>pages/more/more.wxml</text>
+<view class="container">
+
+  <!-- 顶部定位 -->
+  <view class="more_p">
+    <!-- 搜索 -->
+    <view class="more_p_top">
+      <view class="time">
+        <view class="ru">
+          <text>入</text>
+          <text class="ru_time">10.29</text>
+        </view>
+        <view class="li">
+          <text>离</text>
+          <text class="li_time">10.31</text>
+        </view>
+      </view>
+
+      <view class="city">
+        <text class="city_name">郑州市</text>
+      </view>
+      <view class="search">
+        <input type="text" placeholder="搜索位置/地名/房源" class="ipt" placeholder-style='font-size: 14px;color:#cccccc'disabled="true" />
+      </view>
+    </view>
+
+    <!-- tab -->
+    <view class="more_p_zhong">
+      <van-dropdown-menu active-color="#ff4081">
+        <van-dropdown-item  value="{{ value1 }}" options="{{ option1 }}" />
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+        <van-dropdown-item value="{{ value3 }}" options="{{ option3 }}" />
+        <van-dropdown-item value="{{ value4 }}" options="{{ option4 }}" />
+      </van-dropdown-menu>
+    </view>
+
+    <!-- 滑动块 -->
+    <view class="more_p_bottom">
+      <view class="huakuai">优惠</view>
+      <view class="huakuai">速订</view>
+      <view class="huakuai">特色房源</view>
+      <view class="huakuai">近地铁</view>
+      <view class="huakuai">可做法</view>
+      <view class="huakuai">智能门锁</view>
+      <view class="huakuai">有停车位</view>
+    </view>
+ 
+  </view>
+
+
+  <!-- 下面内容 -->
+
+
+  <view class="content">
+    <view class="goods_list">
+      <view class="goods_item" wx:for="{{house}}" wx:key="index">
+        <view class="goods_img" >
+          <image class="img" src="{{item.img}}"></image>
+        </view>
+        <view class="goods_text">
+          <view class="goods_naem">{{item.name}}</view>
+          <view class="goods_desc">{{item.desc1}}</view>
+          <view class="goods_biaoqian">
+            <text class="biaoqian">{{item.discounts}}</text>
+          </view>
+          <view class="goods_price">
+          <text class="oldprice">{{item.oldprice}}</text>
+          <text class="fuhao">￥</text>
+          <text class="newprice">{{item.newprice}}</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+</view>

@@ -14,7 +14,6 @@
    </view>
 
    <view class="index_content">
-      
       <!-- search搜索框 -->
       <view class="index_search">
          <view class="index_search_p1">
@@ -89,17 +88,17 @@
                <view class="house_item_content">
                    <view class="house_item_content1">
                       <view>
-                        <text class="house_price">{{item.price}}</text>
+                        <text class="house_price">￥{{item.price}}</text>
                         <text class="dian">·</text>
                         <text class="house_dwell">{{item.desc}}</text>
                       </view>
                       <view>
                         <van-icon class="star" name="star" />
-                        <text class="house_grade">{{item.grade}}</text>
+                        <text class="house_grade">5.0</text>
                       </view>
                    </view>
                    <view class="house_item_content2">
-                      {{item.content}}
+                      {{item.name}}
                    </view>
                </view>
             </view>

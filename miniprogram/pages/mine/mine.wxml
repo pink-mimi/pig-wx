@@ -1,2 +1,7 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+  1111
+  <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+</view>

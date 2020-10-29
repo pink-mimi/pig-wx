@@ -1,1 +1,165 @@
 /* pages/more/more.wxss */
+.container{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+.more_p{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+/* 搜索 */
+.more_p_top{
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10rpx 40rpx;
+}
+.time{
+  width: 20%;
+  font-size: 24rpx;
+  background-color: #eeeeee;
+  border-radius: 32rpx 0 0 32rpx;
+}
+.ru,.li{
+  text-align: center;
+}
+.ru_time,.li_time{
+  font-weight: 700;
+  color: #ff4081;
+  
+}
+.city{
+  font-size: 28rpx;
+  width: 20%;
+  background-color: #eeeeee;
+  line-height: 64rpx;
+  margin:  0 5rpx;
+  text-align: center;
+}
+
+.search{
+  width: 60%;
+  background-color: #eeeeee;
+  border-radius: 0 32rpx 32rpx 0;
+}
+.ipt{
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+
+
+/* tab切换 */
+.van-dropdown-menu__item{
+  padding-right: 20rpx;
+}
+
+/* 滑动块 */
+.more_p_bottom{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: #eeeeee;
+  padding: 30rpx 40rpx;
+}
+.more_p_bottom::-webkit-scrollbar {
+  display: none;
+  background-color: transparent;
+}
+.huakuai{
+  flex-shrink:0;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 5rpx 20rpx;
+  border-radius: 20rpx;
+  background-color:white;
+  margin-right: 10rpx;
+}
+
+
+/* .下面内容 */
+
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 300rpx  40rpx 0;
+  background-color: #eeeeee;
+}
+.goods_item{
+  display: flex;
+  background-color: white;
+  margin-bottom: 20rpx;
+  justify-content: space-between;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+.goods_img{
+  width: 40%;
+}
+.img{
+  width: 100%;
+  height: 260rpx;
+  border-radius: 20rpx;
+  display: block;
+}
+
+.goods_text{
+  position: relative;
+  width: 60%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.goods_naem{
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-top: 5rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods_desc{
+  font-size: 28rpx;
+  color: #757575;
+}
+.biaoqian{
+  font-size: 24rpx;
+  padding: 5rpx;
+  background-color: rgba(255, 192, 203,0.8);
+  color: rgba(255, 100, 180, 1);
+  margin-right: 5rpx;
+  border-radius: 10rpx;
+}
+
+.goods_price{
+  position: absolute;
+  right: 10rpx;
+  bottom: 0;
+  font-size: 20rpx;
+}
+.newprice{
+  font-size: 32rpx;
+  color: #ff4081;
+  font-weight: 700;
+}
+.fuhao{
+  color: #ff4081;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+}
+.oldprice{
+  font-size: 20rpx;
+  text-decoration: line-through;
+  color: #757575;
+}

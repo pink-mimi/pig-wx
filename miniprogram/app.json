@@ -8,11 +8,15 @@
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fc78b5",
     "navigationBarTitleText": "小猪", 
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    
+    "enablePullDownRefresh": true ,
+    "onReachBottomDistance": 100      
   },
+
 
   "tabBar": {
     "selectedColor": "#fc78b5",
@@ -38,6 +42,10 @@
         "text": "我"
       }
     ]
+  },
+
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index"
   },
 
 

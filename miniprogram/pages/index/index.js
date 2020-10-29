@@ -35,13 +35,20 @@ Page({
 
     // goods房子
     db.collection('indexs').where({
-      name: "goods"
+      _id: "11a6d5c15f9a634c0074125c3cb2eb5b"
     }).get().then(res=> {
-      console.log(res.data,111);
+      // console.log(res.data[0].RECORDS.slice(0,4),111);
       this.setData({
-        house:this.data.house.concat(res.data)
+        house:this.data.house.concat(res.data[0].RECORDS.slice(0,4))
       })
     })
+
+    // // 测试
+    // db.collection('detail').where({
+    //   _id: "11a6d5c15f9a6111007411ac6164084b"
+    // }).get().then(res=> {
+    //   console.log(res.data,111);
+    // })
   
 
   },
