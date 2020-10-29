@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/collect/collect",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/more/more"
    
   ],
   "window": {

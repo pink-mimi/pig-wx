@@ -4,7 +4,9 @@
       <swiper style="height: 480rpx ;width:100%" indicator-dots="true" indicator-active-color="#ffffff" circular="true">
           <swiper-item wx:for="{{swiper}}" wx:key="index">
             <view class="swiper-item">
-               <image class="swiper_img" src="{{item.imgURL}}"></image>
+               <navigator url="{{item.jumpURL}}">
+                  <image class="swiper_img" src="{{item.imgURL}}"></image>
+               </navigator>
             </view>
           </swiper-item>
       </swiper>
@@ -71,47 +73,39 @@
             <view>今晚特价</view>
          </view>
       </view>
-
+      <!-- city_active -->
       <!-- 城市滑块 -->
       <view class="index_city">
-         <view class="city city_active">郑州</view>
-         <view class="city">洛阳</view>
-         <view class="city">开封</view>
-         <view class="city">邯郸</view>
-         <view class="city">成都</view>
-         <view class="city">上海</view>
-         <view class="city">东京</view>
-         <view class="city">重庆</view>
-         <view class="city">更多</view>
+         <view class="city {{num==index?'city_active':''}}" wx:for="{{city}}" wx:key="index" data-index="{{index}}" bindtap="highlight">{{item}}</view>
       </view>
 
       <!-- goods房型 -->
       <view class="index_house">
          <view class="house_list">
-            <view class="house_item">
+            <view class="house_item" wx:for="{{house}}" wx:key="index">
                <view >
-                  <image class="house_item_img" src="https://image.xiaozhustatic3.com/11/s,1,HqQt,1126,750,2,dfb3e444.webp"></image>
+                  <image class="house_item_img" src="{{item.img}}"></image>
                </view>
                <view class="house_item_content">
                    <view class="house_item_content1">
                       <view>
-                        <text class="house_price">￥358</text>
+                        <text class="house_price">{{item.price}}</text>
                         <text class="dian">·</text>
-                        <text class="house_dwell">宜住4人</text>
+                        <text class="house_dwell">{{item.desc}}</text>
                       </view>
                       <view>
                         <van-icon class="star" name="star" />
-                        <text class="house_grade">4.9</text>
+                        <text class="house_grade">{{item.grade}}</text>
                       </view>
                    </view>
                    <view class="house_item_content2">
-                      郑大旁/地铁口/loft/设计师民宿
+                      {{item.content}}
                    </view>
                </view>
             </view>
          </view>
 
-         <view class="house_more">
+         <view class="house_more" bindtap="more">
             查看更多房源
          </view>
       </view>

@@ -85,14 +85,14 @@
 .icon_seach2{
   vertical-align: middle;
   font-size: 32rpx;
-  padding-left: 10rpx;
+  padding-left: 20rpx;
 }
 .index_search_text2{
   font-size: 28rpx;
   vertical-align: middle;
   color: #757575;
   font-weight: 700;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
 }
 
 
@@ -159,19 +159,22 @@
 .house_list{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .house_item{
-  width: 48%;
+  width: 49%;
   padding-bottom: 30rpx;
 }
 .house_item_img{
   width: 100%;
   border-radius: 10rpx;
   height: 200rpx;
+  display: block;
 }
 .house_item_content1{
   display: flex;
   justify-content: space-between;
+  margin: 10rpx 0;
 }
 .house_price{
   font-size: 32rpx;
@@ -179,15 +182,16 @@
 }
 .dian{
   font-size: 24rpx;
-  color: #e0e0e0;
+  color: #dbdbdb;
   padding: 0 10rpx;
 }
 .house_dwell{
   font-size: 24rpx;
-  color: #e0e0e0;
+  color: #dbdbdb;
 }
 .star{
   font-size: 24rpx;
+  font-weight: 700;
   color: #00ffff;
 }
 .house_grade{
