@@ -1,0 +1,37 @@
+{
+  "id": "2159451",
+  "name": "小猪（微信小程序）",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "583729",
+      "name": "聚会",
+      "font_class": "080juhui",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "474028",
+      "name": "小猪2",
+      "font_class": "xiaozhu2",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "8139097",
+      "name": "心 爱心",
+      "font_class": "xinaixin1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "10678968",
+      "name": "我 的",
+      "font_class": "Icon_wode",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

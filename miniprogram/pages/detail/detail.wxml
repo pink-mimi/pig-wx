@@ -1,0 +1,88 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">
+  <view class="detail_swiper">
+    <swiper style="height: 450rpx ;width:100%" indicator-dots="true" indicator-active-color="#ffffff" circular="true">
+        <swiper-item wx:for="{{house_detail[0].img}}" wx:key="index">
+          <view class="swiper-item">
+              <navigator>
+                <image class="swiper_img" src="{{item}}"></image>
+              </navigator>
+          </view>
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="detail_content">
+      <!-- 房源名字 -->
+      <view class="house_name">
+        大兴聚会别墅（轰趴、团建、聚会、生日趴）
+      </view>
+       <!-- 房源描述 -->
+      <view class="house_desc">
+        <view class="house_desc1">
+          <view class="house_desc1_img">
+            <image src="../../images/house.png"></image>
+          </view>
+          <view class="house_desc1_text">
+            <view>整套出租</view>
+            <view>1室1卫</view>
+          </view>
+        </view>
+        <view class="house_desc1">
+          <view class="house_desc1_img">
+            <image src="../../images/sofa.png"></image>
+          </view>
+          <view class="house_desc1_text">
+            <view>整套出租</view>
+            <view>1室1卫</view>
+          </view>
+        </view>
+
+      </view>
+      <!-- 房源地图 -->
+      <view class="house_map">
+          地图
+      </view>
+      <!-- 房源日历 -->
+      <view class="house_date">
+        <view class="date_ru">
+          <text class="yue">11</text>
+          <text>月</text>
+          <text class="ri">09</text>
+          <text>日</text>
+          <text class="text">入住</text>
+        </view>
+        <view class="date_li">
+          <text class="yue">11</text>
+          <text>月</text>
+          <text class="ri">14</text>
+          <text>日</text>
+          <text class="text">离开</text>
+        </view>
+        <van-icon class="arrow" name="arrow" />
+      </view>
+
+      <!-- 设施 -->
+      <view class="">
+
+      </view>
+
+      <!-- 房东 -->
+      <view class="">
+
+      </view>
+
+      <!-- 预定须知 -->
+      <view class="">
+
+      </view>
+
+      <!-- 同类浩方 -->
+      <view class="">
+
+      </view>
+
+  </view>
+</view>
+

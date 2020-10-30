@@ -11,13 +11,13 @@
 
   <view class="city_content">
     <view class="city_class">
-      <view class="home">
-        <view class="home_name">国内</view>
-        <view class="home_i"></view>
+      <view class="home"  bindtap="qiehuan" data-index="0">
+        <view class="home_name {{num==0?'active1':''}}">国内</view>
+        <view class="home_i {{num==0?'active2':''}}" ></view>
       </view>
-      <view class="international">
-        <view class="international_name">国际</view>
-        <view class="international_i"></view>
+      <view class="international" bindtap="qiehuan" data-index="1">
+        <view class="international_name {{num==1?'active1':''}}" >国际</view>
+        <view class="international_i {{num==1?'active2':''}}"></view>
       </view>
     </view>
 
@@ -43,33 +43,30 @@
     <view class="hot_city">
       <view class="hot_city_title">热门城市</view>
       <view class="hot_city_list">
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
-        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name" wx:for="{{hot_city[num].name}}" wx:key="index">{{item}}</view>
       </view>
     </view>
 
     <view class="suoyin">
-      <van-index-bar index-list="{{ indexList }}">
-        <view>
-          <van-index-anchor index="1">标题1</van-index-anchor>
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-        </view>
 
-        <view>
-          <van-index-anchor index="2">标题2</van-index-anchor>
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-        </view>
-      </van-index-bar>
+      <view class="guonei" wx:if="{{num==0}}">
+        <van-index-bar index-list="{{ indexList }}" sticky-offset-top='40' >
+          <view wx:for="{{city}}" wx:key="index">
+            <van-index-anchor class="letter" index="{{item.letter}}">
+            </van-index-anchor>
+            <van-cell class="city_names" title="文本" wx:for="{{city[index].name}}" wx:key="index">
+            {{item}}
+            </van-cell>
+          </view>
+        </van-index-bar>
+      </view>
+
+      <view class="guowai" wx:if="{{num==1}}" wx:key="index">
+          <view class="city_names" wx:for="{{city2}}"> 
+            {{item}}
+          </view>
+      </view>
+
     </view>
   </view>
 

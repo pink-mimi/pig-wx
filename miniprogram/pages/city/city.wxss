@@ -1,9 +1,17 @@
 /* pages/city/city.wxss */
 
+.container{
+  width: 100%;
+  position: relative;
+}
 .search_p{
   width: 100%;
   display: flex;
   background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 .search{
   width: 80%;
@@ -36,7 +44,7 @@
 /* 下面分类 */
 .city_content{
   width: 100%;
-  padding: 0 40rpx;
+  padding: 110rpx 40rpx 0;
   background-color: #eeeeee;
   box-sizing: border-box;
 }
@@ -60,7 +68,13 @@
   transform: translateX(-50%);
   width: 40rpx;
   height: 4rpx;
-  background-color: #ff4081;
+  /* background-color: #ff4081; */
+}
+.active1{
+  color: #212121;
+}
+.active2{
+  background-color:#ff4081 ;
 }
 
 /* 当前位置 */
@@ -128,3 +142,17 @@
 
 
 /* 引入 */
+
+.van-index-anchor{
+  padding: 0 !important;
+  font-size: 32rpx !important;
+  font-weight: 700 !important;
+  margin-top: 30rpx;
+}
+.city_names{
+  display: block;
+  line-height: 80rpx;
+  width: 100%;
+  font-size: 30rpx;
+  border-bottom: 1px solid #e0e0e0;
+}

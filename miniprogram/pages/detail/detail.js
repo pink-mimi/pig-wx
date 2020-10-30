@@ -1,4 +1,4 @@
-// pages/city/city.js
+// pages/detail/detail.js
 const db = wx.cloud.database()
 
 Page({
@@ -7,43 +7,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    indexList: [],
-    city:[],
-    num:0,
-    hot_city:[
-      {
-        name:["北京","上海","成都",'广州','深圳','香港','三亚','重庆']
-      },
-      {
-        name:["东京","大阪","京都",'曼谷','普吉岛','清迈','芭提雅','苏梅岛']
-      }
-    ],
-    city2:['爱丁堡', '艾克斯' , '埃里温' , '阿利坎特',  '阿姆斯特丹']
+    house_detail:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //获取城市数据
+     //获取房源详情
     db.collection('pig').where({
-      name: "city"
+      name: "detail"
     }).get().then(res=> {
-      var a=[]
-      for(var i=0 ;i<res.data[0].RECORDS.length;i++){
-        a.push(res.data[0].RECORDS[i].letter)
-      }
-      // console.log(res.data[0].RECORDS);
+      console.log(res.data[0].RECORDS);
       this.setData({
-        city:this.data.city.concat(res.data[0].RECORDS),
-        indexList:this.data.indexList.concat(a)
+        house_detail:this.data.house_detail.concat(res.data[0].RECORDS)
       })
-    })
-  },
-  qiehuan(e){
-    console.log(e.currentTarget.dataset.index);
-    this.setData({
-      num:e.currentTarget.dataset.index
     })
   },
 

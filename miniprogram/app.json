@@ -4,7 +4,9 @@
     "pages/collect/collect",
     "pages/mine/mine",
     "pages/more/more",
-    "pages/city/city"
+    "pages/city/city",
+    "pages/detail/detail"
+
    
   ],
   "window": {
@@ -14,7 +16,7 @@
     "navigationBarTitleText": "小猪", 
     "navigationBarTextStyle": "black",
     
-    "enablePullDownRefresh": true ,
+    "enablePullDownRefresh": false ,
     "onReachBottomDistance": 100      
   },
 
