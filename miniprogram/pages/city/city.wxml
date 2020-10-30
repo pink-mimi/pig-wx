@@ -1,0 +1,78 @@
+<!--pages/city/city.wxml-->
+<view class="container"> 
+  <view class="search_p">
+    <view class="search">
+      <input class="ipt" placeholder="搜索城市/目的地/景点/房源名" placeholder-style='font-size: 14px;color:#bdbdbd' type="text" name="" id="" >
+      <van-icon class="icon_seach1" name="search" color="black" />
+    </input>
+    </view>
+    <view class="cancel">取消</view>
+  </view>
+
+  <view class="city_content">
+    <view class="city_class">
+      <view class="home">
+        <view class="home_name">国内</view>
+        <view class="home_i"></view>
+      </view>
+      <view class="international">
+        <view class="international_name">国际</view>
+        <view class="international_i"></view>
+      </view>
+    </view>
+
+    <view class="current">
+      <view class="current_title">当前位置</view>
+      <view class="current_content">
+        <view class="current_content1"> 
+          <van-icon class="" name="location" color="black" />
+          <view class="shi">
+            郑州
+          </view>
+          <view>·</view>
+          <view class="qu">
+            中原区中原西路
+          </view>
+        </view>
+        <view class="current_content2">
+          <van-icon class="jiantou" name="arrow" color="black" />
+        </view>
+      </view>
+    </view>
+
+    <view class="hot_city">
+      <view class="hot_city_title">热门城市</view>
+      <view class="hot_city_list">
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+        <view class="hot_city_name">北京</view>
+      </view>
+    </view>
+
+    <view class="suoyin">
+      <van-index-bar index-list="{{ indexList }}">
+        <view>
+          <van-index-anchor index="1">标题1</van-index-anchor>
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+        </view>
+
+        <view>
+          <van-index-anchor index="2">标题2</van-index-anchor>
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+        </view>
+      </van-index-bar>
+    </view>
+  </view>
+
+
+
+</view>

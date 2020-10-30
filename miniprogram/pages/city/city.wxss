@@ -1,0 +1,130 @@
+/* pages/city/city.wxss */
+
+.search_p{
+  width: 100%;
+  display: flex;
+  background-color: white;
+}
+.search{
+  width: 80%;
+  padding: 20rpx 10rpx 20rpx 20rpx;
+}
+.ipt{
+  position: relative;
+  padding: 10rpx 60rpx;
+  background-color: #eeeeee;
+  border-radius: 30rpx;
+}
+.icon_seach1{
+  position: absolute;
+  font-size: 32rpx;
+  top: 50%;
+  left: 20rpx;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.cancel{
+  width: 20%;
+  line-height: 110rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #757575;
+}
+
+
+/* 下面分类 */
+.city_content{
+  width: 100%;
+  padding: 0 40rpx;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+}
+.city_class{
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 0;
+}
+.home,.international{
+  position: relative;
+  font-size: 32rpx;
+  color: #757575;
+  text-align: center;
+  width: 50%;
+}
+
+.home_i,.international_i{
+  position: absolute;
+  bottom: -20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rpx;
+  height: 4rpx;
+  background-color: #ff4081;
+}
+
+/* 当前位置 */
+.current{
+  margin-top: 20rpx;
+}
+.current_title{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.current_content{
+  margin: 20rpx 0;
+  background-color: white;
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-size: 24rpx;
+}
+.current_content1{
+  display: flex;
+}
+.shi{
+  font-weight: 700;
+  margin: 0 10rpx;
+}
+.qu{
+  margin: 0 10rpx;
+  color: #757575;
+}
+
+.current_content2{
+  text-align: right;
+}
+.jiantou{
+  color: #757575;
+}
+
+/* 热门城市 */
+
+.hot_city{
+  margin-top: 60rpx;
+}
+.hot_city_title{
+  font-size: 32rpx;
+  font-weight: 700;
+  margin: 20rpx 0;
+}
+.hot_city_list{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+}
+.hot_city_name{
+  box-sizing: border-box;
+  width: 22%;
+  background-color: white;
+  margin: 10rpx;
+  border-radius: 40rpx;
+  padding: 15rpx 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+
+/* 引入 */

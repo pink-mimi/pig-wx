@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/collect/collect",
     "pages/mine/mine",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/city/city"
    
   ],
   "window": {

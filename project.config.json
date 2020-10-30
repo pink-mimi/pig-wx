@@ -80,6 +80,12 @@
           "pathName": "pages/mine/mine",
           "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "city",
+          "pathName": "pages/city/city",
+          "scene": null
         }
       ]
     }
