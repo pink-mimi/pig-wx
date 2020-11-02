@@ -16,8 +16,14 @@
   <view class="detail_content">
       <!-- 房源名字 -->
       <view class="house_name">
-        大兴聚会别墅（轰趴、团建、聚会、生日趴）
+        {{house_detail[0].name}}
       </view>
+
+      <!-- <view class="jiazai" wx:if="{{jiazai}}">
+        <van-loading type="spinner" color="#1989fa" ></van-loading>
+        <view >加载中</view>
+      </view> -->
+    
        <!-- 房源描述 -->
       <view class="house_desc">
         <view class="house_desc1">
@@ -25,8 +31,8 @@
             <image src="../../images/house.png"></image>
           </view>
           <view class="house_desc1_text">
-            <view>整套出租</view>
-            <view>1室1卫</view>
+            <view>{{house_detail[0].threeIcon1}}</view>
+            <view>{{house_detail[0].generalize1}}</view>
           </view>
         </view>
         <view class="house_desc1">
@@ -34,8 +40,8 @@
             <image src="../../images/sofa.png"></image>
           </view>
           <view class="house_desc1_text">
-            <view>整套出租</view>
-            <view>1室1卫</view>
+            <view>{{house_detail[0].threeIcon2}}</view>
+            <view>加客80元/人</view>
           </view>
         </view>
 
@@ -48,41 +54,152 @@
       <view class="house_date">
         <view class="date_ru">
           <text class="yue">11</text>
-          <text>月</text>
+          <text class="yue_text">月</text>
           <text class="ri">09</text>
-          <text>日</text>
+          <text class="ri_text">日</text>
           <text class="text">入住</text>
         </view>
         <view class="date_li">
           <text class="yue">11</text>
-          <text>月</text>
+          <text class="yue_text">月</text>
           <text class="ri">14</text>
-          <text>日</text>
+          <text class="ri_text">日</text>
           <text class="text">离开</text>
         </view>
         <van-icon class="arrow" name="arrow" />
       </view>
 
       <!-- 设施 -->
-      <view class="">
+      <view class="facility">
+        <view class="facility_title">
+          <view class="facility_name">配套设施</view>
+          <view class="facility_all"><text>全部设施</text><van-icon class="more" name="arrow" /></view>
+        </view>
+        <view class="facility_content">
+          <view class="basics">
+            <view class="title_name">基础</view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">WiFi</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">电梯</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">停车位</text></view>
+          </view>
+          <view class="bath">
+            <view class="title_name">洗浴</view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">独立卫生间</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">公共卫生间</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">热水淋浴</text></view>
+          </view>
+          <view class="electric">
+            <view class="title_name">电器</view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">空调</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">电视</text></view>
+            <view><van-icon name="passed"  class="ico" /><text class="sheshi_name">洗衣机</text></view>
+          </view>
+        </view>
 
       </view>
 
       <!-- 房东 -->
-      <view class="">
-
+      <view class="landlord">
+        <view class="landlord_title">
+          <view class="landlord_title_name">房东介绍</view>
+          <view>
+            <view class="landlord_more"><text>房东主页</text><van-icon class="zhuye" name="arrow" /></view>
+          </view>
+        </view>
+        
+        <view class="landlord_jieshao">
+          <view class="landlord_img">
+            <image src="{{house_detail[0].photo}}"></image>
+          </view>
+          <view class="landlord_info">
+            <view class="landlord_name">{{house_detail[0].landlordName}}</view>
+            <text class="landlord_renzheng">实名认证</text>
+          </view>
+        </view>
+        <view class="landlord_desc">
+          <view class="landlord_desc_text">{{house_detail[0].detail1}}</view>
+          <view class="landlord_desc_more">查看更多</view>
+        </view>
       </view>
+    
 
       <!-- 预定须知 -->
-      <view class="">
+      <view class="notice">
+        <view class="notice_title">
+          <view class="notice_title_name">
+            <text class="notice_title_name1">预定须知</text>
+            <text class="notice_title_name2">（规则由房东制定）</text>
+          </view>
+          <view class="rule"><text class="rule_all">全部规则</text><van-icon class="guize" name="arrow" /></view>
+        </view>
 
+        <view class="notice_list">
+          <view class="notice_item">
+            <view class="notice_item_title">入住/退订</view>
+            <view class="notice_item_desc">入住日14:00后入住，离店日12:00前离开(以当地城市时间区为准).</view>
+          </view>
+          <view class="notice_item">
+            <view class="notice_item_title">在线押金</view>
+            <view class="notice_item_desc">￥300，</view>
+          </view>
+          <view class="notice_item">
+            <view class="notice_item_title">清洁费用</view>
+            <view class="notice_item_desc">不收取清洁费</view>
+          </view>
+          <view class="notice_item">
+            <view class="notice_item_title">加客费用</view>
+            <view class="notice_item_desc">￥80/人</view>
+          </view>
+          <view class="notice_item">
+            <view class="notice_item_title">房东要求</view>
+            <view class="notice_item_desc">允许做饭允许带宠物允许聚会允许吸烟</view>
+          </view>
+          <view class="notice_item">
+            <view class="notice_item_title">取消要求</view>
+            <view class="notice_item_desc">已超时过免费取消时间;若取消订单,将支付一定费用.</view>
+          </view>
+        </view>
+  
       </view>
 
-      <!-- 同类浩方 -->
-      <view class="">
-
+      <!-- 同类好房 -->
+      <view class="type_house">
+        <view class="type_house_title">
+          同类好房
+        </view>
+        <view class="type_house_content">
+          <view class="type_house_item" wx:for="{{house}}" wx:key="index">
+            <view class="type_house_img">
+              <image src="{{item.img}}"></image>
+            </view>
+            <view class="type_house_name">{{item.name}}</view>
+            <view class="type_house_desc">{{item.desc}}</view>
+            <view class="type_house_price">
+              <text class="type_house_price_new">￥{{item.price}}</text>
+              <text class="type_house_price_old"></text>
+            </view>
+          </view>
+        </view>
       </view>
 
+  </view>
+
+
+  <!-- 底部定位 -->
+  <view class="reserve">
+    <view class="function">
+      <view class="chat"><van-icon class="liaotian" name="chat-o" /><view>聊天</view></view>
+      <view class="collect"><van-icon class="shoucang" name="like-o" /><view>收藏</view></view>
+    </view>
+
+    <view class="reserve_price">
+      <text class="reserve_price_ico">￥</text>
+      <text class="reserve_price_num">{{house_detail[0].price}}</text> /晚
+    </view>
+
+    <view class="reserve_lj">
+      立即预定
+    </view>
   </view>
 </view>
 

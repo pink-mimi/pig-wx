@@ -92,6 +92,20 @@
           "id": -1,
           "name": "detail",
           "pathName": "pages/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "collect",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "mine",
+          "pathName": "pages/mine/mine",
           "scene": null
         }
       ]

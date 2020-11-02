@@ -7,36 +7,65 @@ Page({
    * 页面的初始数据
    */
   data: {
-    house_detail:[]
+    house_detail:[],
+    house:[],
+    jiazai:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
+
+    console.log(options.id,88888888888);
+
      //获取房源详情
     db.collection('pig').where({
       name: "detail"
+
     }).get().then(res=> {
-      console.log(res.data[0].RECORDS);
+      console.log(res.data[0].RECORDS[options.id],222222222);
       this.setData({
-        house_detail:this.data.house_detail.concat(res.data[0].RECORDS)
+        house_detail:[]
+      })
+      this.data.house_detail.push(res.data[0].RECORDS[options.id])
+      this.setData({
+        house_detail:this.data.house_detail
+      })
+      console.log(this.data.house_detail,888);
+      
+    })
+
+    // goods房子
+    db.collection('pig').where({
+      name: "index"
+    }).get().then(res=> {
+      // console.log(res.data[0].RECORDS,111);
+      this.setData({
+        house:this.data.house.concat(res.data[0].RECORDS.slice(0,10))
       })
     })
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

@@ -1,2 +1,26 @@
 <!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<view class="container">
+  <view class="header">
+    <view class="desc">快快登录查看你的收藏吧~</view>
+    <text class="login" bindtap="login">登录小猪</text>
+  </view>
+
+  <!-- 推荐民宿 -->
+  <view class="recommend">
+    <view class="recommend_title">推荐民宿</view>
+    <view class="recommend_list">
+      <view class="recommend_item" wx:for="{{house}}" wx:key="index">
+        <view class="recommend_img">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="recommend_name">{{item.name}}</view>
+        <view class="recommend_desc">{{item.desc1}}</view>
+        <view class="recommend_price">
+          <text class="new_price">￥{{item.newprice}}</text>
+          <text class="old_price">{{item.oldprice}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

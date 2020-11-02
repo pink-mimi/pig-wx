@@ -40,6 +40,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
+
     this.getData()
   },
 
@@ -51,14 +58,25 @@ Page({
   },
   getData(){
        //获取房型数据
-       db.collection('more').where({
-        _id: "c497f5885f9a844b011522674a20e0e0"
+       db.collection('pig').where({
+        name: "more"
       }).get().then(res=> {
-        // console.log(res.data[0].RECORDS);
+        console.log(res.data[0].RECORDS);
         this.setData({
           house:this.data.house.concat(res.data[0].RECORDS)
         })
       })
+  },
+  city(){
+    wx.navigateTo({
+      url: '../city/city',
+    })
+  },
+  detail(e){
+    wx.navigateTo({
+      url: '../detail/detail?id='+e.currentTarget.dataset.index,
+    })
+    console.log(e.currentTarget.dataset.index);
   },
 
 

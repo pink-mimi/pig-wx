@@ -17,7 +17,7 @@
       </view>
 
       <view class="city">
-        <text class="city_name">郑州市</text>
+        <text class="city_name" bindtap="city">郑州市</text>
       </view>
       <view class="search">
         <input type="text" placeholder="搜索位置/地名/房源" class="ipt" placeholder-style='font-size: 14px;color:#cccccc'disabled="true" />
@@ -53,22 +53,22 @@
 
   <view class="content">
     <view class="goods_list">
-      <view class="goods_item" wx:for="{{house}}" wx:key="index">
-        <view class="goods_img" >
-          <image class="img" src="{{item.img}}"></image>
-        </view>
-        <view class="goods_text">
-          <view class="goods_naem">{{item.name}}</view>
-          <view class="goods_desc">{{item.desc1}}</view>
-          <view class="goods_biaoqian">
-            <text class="biaoqian">{{item.discounts}}</text>
+      <view class="goods_item" wx:for="{{house}}" wx:key="index" bindtap="detail" data-index="{{index}}">
+          <view class="goods_img" >
+            <image class="img" src="{{item.img}}"></image>
           </view>
-          <view class="goods_price">
-          <text class="oldprice">{{item.oldprice}}</text>
-          <text class="fuhao">￥</text>
-          <text class="newprice">{{item.newprice}}</text>
+          <view class="goods_text">
+            <view class="goods_naem">{{item.name}}</view>
+            <view class="goods_desc">{{item.desc1}}</view>
+            <view class="goods_biaoqian">
+              <text class="biaoqian">{{item.discounts}}</text>
+            </view>
+            <view class="goods_price">
+            <text class="oldprice">{{item.oldprice}}</text>
+            <text class="fuhao">￥</text>
+            <text class="newprice">{{item.newprice}}</text>
+            </view>
           </view>
-        </view>
       </view>
 
     </view>

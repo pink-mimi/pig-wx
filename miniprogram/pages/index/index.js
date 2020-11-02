@@ -37,7 +37,7 @@ Page({
     db.collection('indexs').where({
       _id: "11a6d5c15f9a634c0074125c3cb2eb5b"
     }).get().then(res=> {
-      // console.log(res.data[0].RECORDS.slice(0,4),111);
+      console.log(res.data[0].RECORDS.slice(0,4),111);
       this.setData({
         house:this.data.house.concat(res.data[0].RECORDS.slice(0,4))
       })

@@ -1,18 +1,41 @@
 // pages/collect/collect.js
+const db = wx.cloud.database()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    house:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.setNavigationBarTitle({ title: "收藏" })      
+    wx.setNavigationBarTitle({ title: "收藏" })      
+
+    wx.showLoading({
+      title: '加载中',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
+      
+    // goods房子数据
+    db.collection('pig').where({
+      name: "more"
+    }).get().then(res=> {
+      console.log(res.data[0].RECORDS.slice(0,10),111);
+      this.setData({
+        house:this.data.house.concat(res.data[0].RECORDS.slice(0,10))
+      })
+    })
+  },
+
+  login(){
+
   },
 
   /**
