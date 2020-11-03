@@ -1,0 +1,67 @@
+/* pages/authorization/authorization.wxss */
+
+.container{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.authorization{
+  width: 100%;
+  padding:0  50rpx;
+  box-sizing: border-box;
+}
+.pig_logo{
+  margin: 100rpx 0;
+  text-align: center;
+}
+.pig_logo image{
+  width: 200rpx;
+  height: 100rpx;
+}
+
+
+.pig_desc{
+  margin-bottom: 50rpx;
+}
+.title{
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.text{
+  font-size: 28rpx;
+  color: #757575;
+}
+
+.nape{
+  margin-bottom: 60rpx;
+}
+
+.nape_public text{
+  font-size: 28rpx;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.ico{
+  color: #cccccc;
+  font-size: 36rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.active{
+  color: #ff4081 !important;
+}
+
+.btn1,.btn2{
+  background-color: #ff4081;
+  border-radius:40rpx;
+  font-size: 30rpx;
+  color: white;
+  text-align: center;
+  line-height: 70rpx;
+  
+}
+
+
+

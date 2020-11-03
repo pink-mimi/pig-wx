@@ -168,7 +168,7 @@
           同类好房
         </view>
         <view class="type_house_content">
-          <view class="type_house_item" wx:for="{{house}}" wx:key="index">
+          <view class="type_house_item" bindtap="detail" wx:for="{{house}}" wx:key="index" data-index="{{index}}">
             <view class="type_house_img">
               <image src="{{item.img}}"></image>
             </view>

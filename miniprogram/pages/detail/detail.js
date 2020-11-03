@@ -54,6 +54,13 @@ Page({
   
   },
 
+  detail(e){
+  //  console.log(e.currentTarget.dataset.index);
+    wx.navigateTo({
+      url: '../detail/detail?id='+e.currentTarget.dataset.index,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

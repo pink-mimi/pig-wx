@@ -14,17 +14,17 @@ Page({
       { text: '低价优先', value: 2 },
     ],
     option2: [
-      { text: '默认排序', value: 'a' },
+      { text: '价格', value: 'a' },
       { text: '好评排序', value: 'b' },
       { text: '销量排序', value: 'c' },
     ],
     option3: [
-      { text: '默认排序', value: 'A' },
+      { text: '位置', value: 'A' },
       { text: '好评排序', value: 'B' },
       { text: '销量排序', value: 'C' },
     ],
     option4: [
-      { text: '默认排序', value: '一' },
+      { text: '帅选', value: '一' },
       { text: '好评排序', value: '二' },
       { text: '销量排序', value: '三' },
     ],

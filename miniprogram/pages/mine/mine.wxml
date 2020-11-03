@@ -1,7 +1,58 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-  1111
-  <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
-  <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+  <view class="box">
+    <image class="img" src="https://m.xiaozhu.com/static/img/bg.b79b6cc.jpg"></image>
+    <view class="login">
+      <view class="login_img">
+        <image src="../../images/11-小猪.png"></image>
+      </view>
+      <view bindtap="login">
+        登录/注册
+      </view>
+    </view>
+    <view class="chunk">
+      <view class="chunk1">
+        <view>
+          <image src="../../images/Order-订单-1.png"></image>
+          <text>订单记录</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+        <view>
+          <image src="../../images/聊天.png"></image>
+          <text>聊天记录</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+      </view>
+      <view class="chunk2">
+        <view>
+          <image src="../../images/特权.png"></image>
+          <text>特权卡券</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+        <view>
+          <image src="../../images/邀请有礼.png"></image>
+          <text>邀请有礼</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+      </view>
+      <view class="chunk3">
+        <view class="chunk3_1">
+          <image src="../../images/代金券.png"></image>
+          <text class="daijinquan">代金券</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+      </view>
+      <view class="chunk4">
+        <view class="chunk4_1">
+          <image src="../../images/学生.png"></image>
+          <text class="renzheng">学生认证</text>
+          <van-icon class="arrow" name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+
 
 </view>
+ 

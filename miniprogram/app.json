@@ -5,9 +5,9 @@
     "pages/mine/mine",
     "pages/more/more",
     "pages/city/city",
-    "pages/detail/detail"
-
-   
+    "pages/detail/detail",
+    "pages/authorization/authorization"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

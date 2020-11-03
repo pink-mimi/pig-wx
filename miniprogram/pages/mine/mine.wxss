@@ -1,1 +1,105 @@
 /* pages/mine/mine.wxss */
+.container{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.box{
+  width: 100%;
+  box-sizing: border-box;
+  /* background: url('https://m.xiaozhu.com/static/img/bg.b79b6cc.jpg') no-repeat;
+  background-size: cover; */
+  border-radius: 20rpx;
+  padding: 20rpx;
+  position: relative;
+}
+.img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 20rpx;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.login{
+  width: 100%;
+  margin: 50rpx 0 150rpx 0;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.login_img{
+  width: 100%;
+  text-align: center;
+}
+.login_img image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.chunk1,.chunk2{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+}
+
+.chunk1>view,.chunk2>view{
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 49%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40rpx 0;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.chunk1 image,.chunk2 image,.chunk3 image,.chunk4 image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.chunk1 text,.chunk2 text,.chunk3 text,.chunk4 text{
+  vertical-align: middle;
+  margin: 0 20rpx;
+}
+.arrow{
+  vertical-align: middle;
+  font-size:32rpx ;
+  height: 32rpx;
+}
+
+.chunk3,.chunk4{
+  margin-bottom: 15rpx;
+}
+.chunk3 .chunk3_1,.chunk4 .chunk4_1{
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40rpx 0;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.chunk3_1,.chunk4_1{
+  display: flex;
+  justify-content: left;
+
+}
+.chunk3_1 image,.chunk4_1 image{
+  margin-left:50rpx;
+}
+.chunk3_1 .arrow{
+  margin-left: 360rpx;
+}
+.chunk4_1 .arrow{
+  margin-left: 337rpx;
+}

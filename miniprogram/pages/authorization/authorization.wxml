@@ -1,0 +1,30 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="container">
+  <view class="authorization">
+    <view class="pig_logo">
+      <image src="../../images/logo.png"></image>
+    </view>
+
+    <view class="pig_desc">
+      <view class="title">请允许小猪短租获取以下权限</view>
+      <view class="text">以下信息仅用于你的登录小猪短租，我们将严格保密绝对不外泄，更不会对您发送垃圾信息造成骚扰</view>
+    </view>
+
+    <view class="nape">
+      <view class="nape_public {{nickname?'active':''}}">
+        <van-icon class="ico {{nickname?'active':''}}" name="checked" />
+        <text>授权您的微信昵称及头像</text>
+      </view>
+      <view class="nape_public {{phone?'active':''}}">
+        <van-icon class="ico {{phone?'active':''}}" name="checked" />
+        <text>授权您的微信绑定的手机号</text>
+      </view>
+    </view>
+
+    <view class="authorization_btn" >
+      <button class="btn1 " wx:if="{{num==1}}"  open-type="getUserInfo" bindtap="login">第一步:授权昵称及头像</button>
+      <view class="btn2" wx:if="{{num==2}}" >第二步:授权微信手机号</view>
+    </view>
+
+  </view>
+</view>
