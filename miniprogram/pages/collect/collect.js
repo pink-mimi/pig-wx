@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    house:[]
+    house:[],
+    user:false
   },
 
   /**
@@ -17,16 +18,17 @@ Page({
     wx.setNavigationBarTitle({ title: "收藏" })      
 
     wx.showLoading({
-      title: '加载中',
+      title: '加载中',  ////加载出现
     })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
-      
+
     // goods房子数据
     db.collection('pig').where({
       name: "more"
     }).get().then(res=> {
+      if(res.errMsg=="collection.get:ok"){
+        wx.hideLoading()   ///加载消失
+      }
+      
       console.log(res.data[0].RECORDS.slice(0,10),111);
       this.setData({
         house:this.data.house.concat(res.data[0].RECORDS.slice(0,10))
@@ -37,6 +39,40 @@ Page({
   login(){
 
   },
+  detail(e){
+    //  console.log(e.currentTarget.dataset.index);
+      wx.navigateTo({
+        url: '../detail/detail?id='+e.currentTarget.dataset.index,
+      })
+    },
+
+  getData(){
+    var that=this
+    var openid
+    wx.getStorage({
+      key: 'openid',
+      success (res) {
+        console.log(res,'openid')
+        openid=res.data
+      },
+    })
+
+    wx.getStorage({
+      key: 'userInfo',
+      success (res) {
+        console.log(res,'userInfo')
+        if(openid){
+          console.log(1111);
+          if(res.data){
+            that.setData({
+              user:true   ///表示已经登录
+            })
+          }
+        }
+      }
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -49,7 +85,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getData()
   },
 
   /**

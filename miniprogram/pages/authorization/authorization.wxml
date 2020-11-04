@@ -22,8 +22,8 @@
     </view>
 
     <view class="authorization_btn" >
-      <button class="btn1 " wx:if="{{num==1}}"  open-type="getUserInfo" bindtap="login">第一步:授权昵称及头像</button>
-      <view class="btn2" wx:if="{{num==2}}" >第二步:授权微信手机号</view>
+      <button class="btn1 " wx:if="{{num==1}}"  open-type="getUserInfo" bindtap="nickname">第一步:授权昵称及头像</button>
+      <view class="btn2" wx:if="{{num==2}}" bindtap="phone" >第二步:授权微信手机号</view>
     </view>
 
   </view>

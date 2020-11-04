@@ -40,12 +40,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '加载中',
-    })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
+    // wx.showLoading({
+    //   title: '加载中',
+    // })
 
     this.getData()
   },
@@ -58,9 +55,18 @@ Page({
   },
   getData(){
        //获取房型数据
+
+       wx.showLoading({
+        title: '加载中',
+      })
+
        db.collection('pig').where({
         name: "more"
       }).get().then(res=> {
+        if(res.errMsg=="collection.get:ok"){
+          wx.hideLoading()   ///加载消失
+        }
+        
         console.log(res.data[0].RECORDS);
         this.setData({
           house:this.data.house.concat(res.data[0].RECORDS)

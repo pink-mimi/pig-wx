@@ -42,10 +42,10 @@
   margin-left: 5%;
   box-sizing: border-box;
   position: absolute;
-  top: 0;
+  top: -40rpx;
   left: 0;
-  transform: translateY(-50%);
-  position: relative;
+  /* transform: translateY(-50%); */
+  /* position: relative; */
 }
 .search{
   width: 100%;
@@ -99,7 +99,7 @@
 /* input下面的宫格 */
 
 .index_gongge{
-  padding: 0 40rpx ;
+  padding: 60rpx 40rpx 0 40rpx;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -216,6 +216,7 @@
 /* swiper轮播 */
 .index_content_swiper{
   margin: 30rpx 40rpx 0;
+
 }
 
 .swiper_item{

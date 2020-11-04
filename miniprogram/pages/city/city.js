@@ -28,9 +28,9 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    // }, 1000)
 
     //获取城市数据
     db.collection('pig').where({
@@ -45,6 +45,11 @@ Page({
         city:this.data.city.concat(res.data[0].RECORDS),
         indexList:this.data.indexList.concat(a)
       })
+
+      if(res.errMsg=="collection.get:ok"){
+        wx.hideLoading()   ///加载消失
+      }
+
     })
   },
   qiehuan(e){

@@ -1,6 +1,13 @@
 <!--pages/collect/collect.wxml-->
 <view class="container">
-  <view class="header">
+  <view class="header2"  wx:if="{{user}}">
+      <view class="wu">
+        <view>你还没有收藏过任何民宿~</view>
+        <view>看看推荐吧~</view>
+      </view>
+  </view>
+
+  <view class="header1" wx:else>
     <view class="desc">快快登录查看你的收藏吧~</view>
     <text class="login" bindtap="login">登录小猪</text>
   </view>
@@ -9,7 +16,7 @@
   <view class="recommend">
     <view class="recommend_title">推荐民宿</view>
     <view class="recommend_list">
-      <view class="recommend_item" wx:for="{{house}}" wx:key="index">
+      <view class="recommend_item" wx:for="{{house}}" wx:key="index" bindtap="detail" data-index="{{index}}">
         <view class="recommend_img">
           <image src="{{item.img}}"></image>
         </view>

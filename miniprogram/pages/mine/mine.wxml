@@ -5,17 +5,20 @@
     <image class="img" src="https://m.xiaozhu.com/static/img/bg.b79b6cc.jpg"></image>
     <view class="login">
       <view class="login_img">
-        <image src="../../images/11-小猪.png"></image>
+        <image src="{{avatarUrl}}"></image>
       </view>
-      <view bindtap="login">
-        登录/注册
+      <view bindtap="login" wx:if="{{active}}">
+        {{login}}
+      </view>
+      <view wx:else>
+        {{nickName}}
       </view>
     </view>
     <view class="chunk">
       <view class="chunk1">
         <view>
           <image src="../../images/Order-订单-1.png"></image>
-          <text>订单记录</text>
+          <text >订单记录</text>
           <van-icon class="arrow" name="arrow" />
         </view>
         <view>

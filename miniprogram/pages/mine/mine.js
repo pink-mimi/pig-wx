@@ -5,15 +5,50 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    avatarUrl:"../../images/11-小猪.png",
+    login:"登录/注册",
+    nickName:"111",
+    active:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-   
+  onLoad: function () {
+
   },
+
+  getData(){
+    var that=this
+    var openid
+    wx.getStorage({
+      key: 'openid',
+      success (res) {
+        console.log(res,'openid')
+        openid=res.data
+      },
+    })
+
+    wx.getStorage({
+      key: 'userInfo',
+      success (res) {
+        console.log(res,'userInfo')
+        if(openid){
+          console.log(1111);
+          if(res.data){
+            console.log(666,res);
+            
+            that.setData({
+              avatarUrl:res.data.avatarUrl,
+              nickName:res.data.nickName,
+              active:false
+            })
+          }
+        }
+      }
+    })
+  },
+
   login(){
     wx.navigateTo({
       url: '../authorization/authorization',
@@ -31,7 +66,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(1111);
+    var that=this;
+      setTimeout(() => {
+      that.getData()
+      }, 1000);
   },
 
   /**

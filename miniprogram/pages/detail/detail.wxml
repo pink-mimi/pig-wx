@@ -47,9 +47,9 @@
 
       </view>
       <!-- 房源地图 -->
-      <view class="house_map">
+      <!-- <view class="house_map">
           地图
-      </view>
+      </view> -->
       <!-- 房源日历 -->
       <view class="house_date">
         <view class="date_ru">

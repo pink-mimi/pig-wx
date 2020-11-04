@@ -19,9 +19,9 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    // }, 1000)
 
     console.log(options.id,88888888888);
 
@@ -39,6 +39,11 @@ Page({
         house_detail:this.data.house_detail
       })
       console.log(this.data.house_detail,888);
+
+
+      if(res.errMsg=="collection.get:ok"){
+        wx.hideLoading()   ///加载消失
+      }
       
     })
 

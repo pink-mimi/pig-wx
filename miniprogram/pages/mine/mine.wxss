@@ -37,12 +37,12 @@
   font-weight: 700;
 }
 .login_img{
-  width: 100%;
   text-align: center;
 }
 .login_img image{
-  width: 180rpx;
-  height: 180rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
 }
 
 .chunk1,.chunk2{
