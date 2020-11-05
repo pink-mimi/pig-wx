@@ -9,7 +9,7 @@
 
   <view class="header1" wx:else>
     <view class="desc">快快登录查看你的收藏吧~</view>
-    <text class="login" bindtap="login">登录小猪</text>
+    <text class="login" bindtap="login" bindtap="login">登录小猪</text>
   </view>
 
   <!-- 推荐民宿 -->

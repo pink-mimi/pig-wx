@@ -37,7 +37,9 @@ Page({
   },
 
   login(){
-
+    wx.navigateTo({
+      url: '../authorization/authorization',
+    })
   },
   detail(e){
     //  console.log(e.currentTarget.dataset.index);
@@ -85,7 +87,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getData()
+    var that=this;
+      setTimeout(() => {
+      that.getData()
+      }, 1000);
   },
 
   /**
